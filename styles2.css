@@ -1,0 +1,54 @@
+.about-us-section {
+    background-color: #ffffff;
+    padding: 60px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.highlight-yellow {
+    color: #FFC107;
+    font-weight: bold;
+}
+
+.about-us-section h2,
+.about-us-section h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-us-section p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.img-fluid {
+    border-radius: 10px;
+}
+
+.team-img {
+    width: 150px;
+    height: 150px;
+    border: 5px solid #FFC107;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    margin-top: 50px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+
+    .about-us-section h2,
+    .about-us-section h3 {
+        font-size: 2rem;
+    }
+
+    .about-us-section p {
+        font-size: 1rem;
+    }
+}

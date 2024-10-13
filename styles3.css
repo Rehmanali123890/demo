@@ -1,0 +1,392 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-brand img.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navbar .navbar-brand .brand-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fdd835;
+    /* Yellow accent color */
+}
+
+.navbar .nav-link {
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.2rem;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #fdd835;
+    /* Highlighted yellow color */
+    border-bottom: 2px solid #fdd835;
+}
+
+.navbar-toggler {
+    border-color: #fdd835;
+}
+
+
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    /* Fullscreen height for large screens */
+    background-image: url('header-background2.jpg');
+    background-size: cover;
+    /* Ensure the image covers the entire section */
+    background-position: center center;
+    /* Center the background image */
+    background-attachment: fixed;
+    /* Keep the background fixed when scrolling */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.35);
+    /* Light overlay for better text readability */
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    /* Slightly smaller heading */
+    font-weight: 600;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1rem;
+    /* Smaller paragraph */
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.hero .btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #fdd835;
+    border-color: #fdd835;
+    color: #333;
+}
+
+#navbarNav {
+    flex: none;
+}
+
+/* Mobile Styles (Reducing Text Size for Smaller Screens) */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+        margin-top: 10px;
+
+    }
+
+    .navbar-brand {
+        margin: 0 auto;
+    }
+
+    .navbar .navbar-brand img.logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 220px;
+
+    }
+
+    .navbar .navbar-brand .brand-text {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fdd835;
+        display: none;
+        /* Yellow accent color */
+    }
+
+    /* Adjust the hero section for smaller screens */
+    .hero {
+        height: 60vh;
+        /* Reduce height for mobile */
+        background-attachment: scroll;
+        /* Disable fixed background on mobile for performance */
+        background-size: cover;
+        /* Ensure the background still covers the hero section */
+        background-position: center;
+        /* Center the image */
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        /* Smaller hero heading */
+        font-weight: 500;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+        /* Smaller text for the paragraph */
+        margin-bottom: 1rem;
+    }
+
+    .hero .btn {
+        padding: 0.6rem 1.2rem;
+        /* Adjust button padding for mobile */
+        font-size: 0.9rem;
+        /* Smaller button text */
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 576px) {
+
+    /* Further reduce hero section size for very small screens */
+    .hero {
+        height: 50vh;
+        /* Smaller hero height */
+        background-size: cover;
+        /* Ensure the background image fits */
+        background-position: center;
+        /* Center the image */
+        background-attachment: scroll;
+        /* Make background scroll normally */
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+        /* Further reduce heading size */
+    }
+
+    .hero p {
+        font-size: 0.8rem;
+        /* Further reduce paragraph size */
+        margin-bottom: 0.8rem;
+    }
+
+    .hero .btn {
+        padding: 0.5rem 1rem;
+        /* Smaller button size */
+        font-size: 0.8rem;
+    }
+
+}
+
+/* Project Carousel Section Styling */
+#project-carousel-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+#project-carousel-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Independent Carousel Controls */
+#project-carousel-section .carousel-control-prev-icon {
+    background-color: #111110;
+    border-radius: 50%;
+}
+
+#project-carousel-section .carousel-control-next-icon {
+    background-color: #111110;
+    border-radius: 50%;
+}
+
+/* Project Card Styling */
+.project-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Project Title Styling */
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.project-title .project-contractor-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Project Details Styling */
+.project-detail {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.project-detail strong {
+    color: #fdd835;
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    #project-carousel-section h2 {
+        font-size: 2rem;
+    }
+
+    .project-title {
+        font-size: 1.25rem;
+    }
+
+    .project-detail {
+        font-size: 0.9rem;
+    }
+
+    .project-contractor-logo {
+        width: 20%;
+        height: 80px;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-title {
+        font-size: 1.1rem;
+    }
+
+    .project-detail {
+        font-size: 0.85rem;
+    }
+
+    .project-contractor-logo {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Main Contractor Section Styling */
+#main-contractor-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+#main-contractor-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contractor-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.contractor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.contractor-logo {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.contractor-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contractor-company {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    #main-contractor-section h2 {
+        font-size: 2rem;
+    }
+
+    .contractor-title {
+        font-size: 1.1rem;
+    }
+
+    .contractor-logo {
+        width: 120px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contractor-title {
+        font-size: 1rem;
+    }
+
+    .contractor-logo {
+        width: 100px;
+    }
+}
